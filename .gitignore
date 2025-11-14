@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+venv/
+env/
+
+# Models & Data (too large)
+saved_models/
+models/
+*.pth
+*.pt
+data/
+
+# Logs
+*.log
+logs/
+results/
+
+# Environment
+.env
