@@ -1,0 +1,33 @@
+## QUICK TEST - ONE COMMAND
+
+SSH into server first:
+    ssh team04@129.212.178.168 -p 32605
+    Password: Et;;%oiWS)IT<Ot0uY0CTrG07YiHZbSQ
+
+Then copy/paste this ONE command:
+
+cd ~/distributed-ai-hack-berlin/coldstart && source ~/hackathon-venv/bin/activate && export DATASET_DIR=~/xray-data && flwr run . local-simulation --stream
+
+---
+
+## What it does:
+1. Goes to coldstart directory
+2. Activates Python environment
+3. Sets dataset path
+4. Starts training (5 rounds, EfficientNet B0)
+
+## Expected output:
+Loading ServerApp...
+Loading ClientApp...
+INFO: Starting Flower simulation
+Round 1/5
+  Training on Hospital A, B, C...
+  AUROC: 0.XXXX
+Round 2/5...
+...
+
+## Time: 5-10 minutes
+
+## After it completes:
+- Check saved models: ls -lh ~/distributed-ai-hack-berlin/coldstart/models/
+- For full training (20 rounds): Edit pyproject.toml, change num-server-rounds from 5 to 20, then run again
